@@ -112,50 +112,50 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+  #INCLUDE_DIRS include
 #  LIBRARIES quadrotor_code
-#  CATKIN_DEPENDS roscpp rospy sensor_msgs std_msgs
+  #CATKIN_DEPENDS roscpp rospy sensor_msgs std_msgs
 #  DEPENDS system_lib
 )
 
 ###########
 ## Build ##
 ###########
-add_executable(gpstest src/gpstest.cpp) 
+#add_executable(gpstest src/gpstest.cpp) 
 add_executable(fixalpha src/fix_alpha.cpp) 
-add_executable(hector_reset src/hector_reset.cpp) 
-add_executable(bebop_manager src/bebop_manager.cpp) 
-add_executable(fly_circle src/fly_circle.cpp)
-add_executable(hector_sim_manager src/hector_sim_manager.cpp)
+#add_executable(hector_reset src/hector_reset.cpp) 
+#add_executable(bebop_manager src/bebop_manager.cpp) 
+#add_executable(fly_circle src/fly_circle.cpp)
+#add_executable(hector_sim_manager src/hector_sim_manager.cpp)
 #add_dependencies(gpstest ${micros_flocking_EXPORTED_TARGETS})
 
-add_dependencies(gpstest ${quadrotor_code_EXPORTED_TARGETS})
+#add_dependencies(gpstest ${quadrotor_code_EXPORTED_TARGETS})
 add_dependencies(fixalpha ${quadrotor_code_EXPORTED_TARGETS})
-add_dependencies(hector_reset ${quadrotor_code_EXPORTED_TARGETS})
-add_dependencies(bebop_manager ${quadrotor_code_EXPORTED_TARGETS})
-add_dependencies(fly_circle ${quadrotor_code_EXPORTED_TARGETS})
-add_dependencies(hector_sim_manager ${quadrotor_code_EXPORTED_TARGETS})
-add_dependencies(bebop_manager decide_softbus_msgs_generate_messages_cpp)
-add_dependencies(hector_sim_manager decide_softbus_msgs_generate_messages_cpp)
+#add_dependencies(hector_reset ${quadrotor_code_EXPORTED_TARGETS})
+#add_dependencies(bebop_manager ${quadrotor_code_EXPORTED_TARGETS})
+#add_dependencies(fly_circle ${quadrotor_code_EXPORTED_TARGETS})
+#add_dependencies(hector_sim_manager ${quadrotor_code_EXPORTED_TARGETS})
+#add_dependencies(bebop_manager decide_softbus_msgs_generate_messages_cpp)
+#add_dependencies(hector_sim_manager decide_softbus_msgs_generate_messages_cpp)
 
-target_link_libraries( gpstest 
-   ${catkin_LIBRARIES}
- )
+#target_link_libraries( gpstest 
+#   ${catkin_LIBRARIES}
+# )
  target_link_libraries( fixalpha 
    ${catkin_LIBRARIES}
  )
-  target_link_libraries( hector_reset 
-   ${catkin_LIBRARIES}
- )
- target_link_libraries( bebop_manager 
-   ${catkin_LIBRARIES}
- )
- target_link_libraries( fly_circle 
-   ${catkin_LIBRARIES}
- )
- target_link_libraries( hector_sim_manager 
-   ${catkin_LIBRARIES}
- )
+#  target_link_libraries( hector_reset 
+#   ${catkin_LIBRARIES}
+# )
+# target_link_libraries( bebop_manager 
+#   ${catkin_LIBRARIES}
+# )
+# target_link_libraries( fly_circle 
+#   ${catkin_LIBRARIES}
+# )
+# target_link_libraries( hector_sim_manager 
+#   ${catkin_LIBRARIES}
+# )
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)

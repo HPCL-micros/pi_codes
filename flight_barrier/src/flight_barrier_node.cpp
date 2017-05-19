@@ -149,12 +149,13 @@ void cmdCallBack(const geometry_msgs::TwistConstPtr& cmd)
 {
     if(need_hover)  //需要悬停，速度置0
     {
-        geometry_msgs::Twist t;
+        /*geometry_msgs::Twist t;
         t.linear.x=0.0;
         t.linear.y=0.0;
         t.linear.z=0.0;
 
-        cmd_vel_pub.publish(t);
+        cmd_vel_pub.publish(t);*/
+        return;
     }
     else
     {
