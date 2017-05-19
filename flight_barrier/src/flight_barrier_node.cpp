@@ -302,7 +302,7 @@ int main (int argc, char **argv) {
 
     //ros::Subscriber fix_sub = node.subscribe("fix", 10, fixCallBack);
     ros::Subscriber odom_sub = node.subscribe("odom", 10, odomCallBack);
-    ros::Subscriber stop_sub = node.subscribe("stop", 10, stopCallBack);
+    ros::Subscriber stop_sub = node.subscribe("/stop", 10, stopCallBack);
     ros::Subscriber cmd_vel_sub = node.subscribe("barrier_input_cmd_vel", 1000, cmdCallBack);
     cmd_vel_pub = node.advertise<geometry_msgs::Twist>("cmd_vel", 1000);
     //driver_down_pub = node.advertise<std_msgs::String>("/uav_driver_down", 1000);
