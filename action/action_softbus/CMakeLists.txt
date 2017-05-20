@@ -53,11 +53,11 @@ target_link_libraries(action_softbus_node action_softbus)
 #set_target_properties(action_softbus_node PROPERTIES OUTPUT_NAME action_softbus_node)
 
 ## Declare a C++ library
-add_library(demo_action
-    src/demo_action.cpp
-)
-add_dependencies(demo_action action_softbus_gencfg)
-add_dependencies(demo_action ${decide_softbus_msgs_EXPORTED_TARGETS})
+#add_library(demo_action
+#    src/demo_action.cpp
+#)
+#add_dependencies(demo_action action_softbus_gencfg)
+#add_dependencies(demo_action ${decide_softbus_msgs_EXPORTED_TARGETS})
 
 add_library(bebop_action
     src/bebop_action.cpp

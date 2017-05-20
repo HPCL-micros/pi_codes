@@ -164,6 +164,8 @@ void cmdCallBack(const geometry_msgs::TwistConstPtr& cmd)
         t.linear.y = abs(cmd->linear.y) < y_vel_limit?cmd->linear.y:y_vel_limit*(cmd->linear.y / abs(cmd->linear.y) );
         t.linear.z = abs(cmd->linear.z) < z_vel_limit?cmd->linear.z:z_vel_limit*(cmd->linear.z / abs(cmd->linear.z) );
 
+        t.angular.z=cmd->angular.z;
+
         cmd_vel_pub.publish(t);
     }
 }
