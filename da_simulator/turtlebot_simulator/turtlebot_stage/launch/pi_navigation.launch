@@ -10,6 +10,7 @@
 
   <!--  **************Swarm Navigation  ***************  -->
   <group ns="uav0">
+    <param name="tf_prefix" value="uav0" />
     <node pkg="action_softbus" type="action_softbus_node" name="action_softbus_node0" output="screen">
       <param name="action_plugin_name" value="action_softbus/BebopAction"/>
       <param name="odom_frame_id" value="/uav0/odom"/>

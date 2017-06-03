@@ -17,3 +17,7 @@ source ~/catkin_ws/devel/setup.bash
 export ROS_HOSTNAME="192.168.21.100"
 exec "$@"
 ```
+#### 使用chmod为env.sh添加执行权限
+```
+chmod +x /home/pi/catkin_ws/env.sh
+```
